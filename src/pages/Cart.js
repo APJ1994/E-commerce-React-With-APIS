@@ -154,7 +154,6 @@ return new Promise((resolve)=>{
     </>
     :
     <div>
-     
       {/* {"Products"+JSON.stringify(products)} */}
        <div className="bg-gray-100 h-screen py-8">
   <div className="container mx-auto px-4">
@@ -203,8 +202,8 @@ return new Promise((resolve)=>{
               {/* More product rows */}
             </tbody>
           </table>
-          
-               
+          </div>
+          </div>
           <div className="md:w-1/4">
         <div className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-lg font-semibold mb-4">Summary</h2>
@@ -228,13 +227,10 @@ return new Promise((resolve)=>{
           <button onClick={displayRazorpay} className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Order Now</button>
         </div>
       </div>
-        </div>
+        
       </div>
-      
-    </div>
-  </div>
 </div>
-
+</div>
     </div>
     
     
