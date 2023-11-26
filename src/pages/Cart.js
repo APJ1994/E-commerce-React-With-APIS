@@ -78,7 +78,7 @@ return cart.items[productID]
 
   }
 
-  const Razorpay=useRazorpay();
+const Razorpay=useRazorpay();
 
 const loadScript=(src)=>{
 return new Promise((resolve)=>{
@@ -104,7 +104,7 @@ return new Promise((resolve)=>{
       alert('Your Offiline!');
       return
     }
-    const data=await fetch('http://localhost/myecomm/MyPayment/paymentOrder',{method:'POST'}).then((t)=>
+    const data=await fetch('http://localhost:4200/payments',{method:'POST'}).then((t)=>
     t.json()
     )
     console.log(data);
@@ -112,7 +112,7 @@ return new Promise((resolve)=>{
     
     
     var options = {
-      "key": "rzp_test_lyKkX7arHRJmeu", // Enter the Key ID generated from the Dashboard
+      "key": "rzp_test_rR38FXAeKOiyCD", // Enter the Key ID generated from the Dashboard
       "amount":data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
       "name": "Ecomm App", //your business name
@@ -181,7 +181,7 @@ return new Promise((resolve)=>{
               <tr key={product.product_id}>
                 <td className="py-4">
                   <div className="flex items-center">
-                    <img className="h-16 w-16 mr-4" src="https://via.placeholder.com/150" alt="Product image" />
+                    <img className="h-16 w-16 mr-4" src={`http://localhost:4200/uploads/${product.product_image}`} alt="Product image" />
                     <span className="font-semibold">{product.product_name}</span>
                   </div>
                 </td>
